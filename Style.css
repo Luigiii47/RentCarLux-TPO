@@ -2,7 +2,7 @@
 header {
     background-color: #333;
     color: #c53737;
-    padding: 20px;
+    padding: 15px;
 }
 
 nav li {
@@ -21,6 +21,19 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+}
+
+#ImgPrincipal{
+    padding: 10px;
+    margin-top: 0;
+}
+
+#NombreImg{
+    color: #fff;
+    position: absolute;
+    margin-left: 30%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
 }
 
 h2 {
@@ -78,10 +91,45 @@ button:hover {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 50px;
+    padding: 25px;
     text-align: center;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+
+
+/* Estilos para la pagina Displonibles */
+
+
+
+.Todos{
+    display: flex;
+    flex-direction: column;
+}
+
+.Auto{
+    background-color: white;
+    color: #c53737;
+    border: 3px solid red;
+    margin: 10px;
+    height: 250px;
+    width: 100%;
+    display: inline-block;
+}
+
+.Auto img{
+    height: 150px;
+    width: auto;
+    display: block;
+    margin: 20px;
+
+}
+.Auto p{
+    color: red;
+    font-size: 30px;
+    margin-left: 20px;
+
 }
