@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 /* Estilos para el encabezado */
 header {
     background-color: #333;
@@ -93,9 +97,6 @@ footer {
     color: #fff;
     padding: 25px;
     text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
 }
 
