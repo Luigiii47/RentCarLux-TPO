@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="contacto-estilos.css"">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="forms.css"">
     <title>Contacto</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-          <ul>
-            <li><a href="MainPage.html">Renta de Autos</a></li>
-            <li><a href="#">Autos disponibles</a></li>
-            <li><a href="Reserva.html">Reservar</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-    </header>
+    <script src=" app.js"></script>
+
     <article>
-        <div class="texto">
-            <h3>Completa con los siguientes datos y en breve nos estaremos comunicando</h3>
-            <div class="salto"><br></div>
-        </div>
-        <br>
         <section class="form">
-            <form action="">
+
+            <p style="text-align: center;">Déjanos tu mensaje, te responderemos a la brevedad.</p>
+            <br><br>
+            <form action="#" target="_blank">
                 <!--Nombre y apellido-->
-                <input type="text" placeholder="Nombre y apellido" id="Nombre" class="nombre">
+
+                <input type="text" placeholder="Nombre" id="Nombre" class="nombre" maxlength="45">
+                <input type="text" placeholder="Apellido" id="Nombre" class="apellido" maxlength="45">
 
                 <!--Email de la persona-->
-                <input type="email" name="" id="Email" placeholder="Direccion de correo electronico" class="email">
+
+                <input type="email" name="" id="Email" placeholder="Email" class="email">
+                
+                 <!--Tel de la persona-->
+                <input type="tel" placeholder="Teléfono" id="Teléfono" class="tel">
 
                 <!--Mensaje de la persona-->
-                <textarea name="" id="Mensaje" placeholder="Mensaje" class="mensaje"></textarea>
+
+                <textarea name="msg" id="mensaje" placeholder="Escriba aquí su mensaje..." class="msg"></textarea>
 
                 <!--Boton de enviar-->
-                <input type="submit" value="Enviar" class="boton">
+                <input type="submit" value="ENVIAR" class="sendBtn">
             </form>
         </section>
     </article>
-    <footer>
-        <div>
-            <p>Contacto: rentadeautos@example.com</p>
-        </div>
-        <div>
-            <p class="p-block">© 2023 RentCarLux</p>
-        </div>
-    </footer>
+    
     </body>
+
 </html>

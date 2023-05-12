@@ -1,0 +1,91 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+}
+
+form {
+    display: grid;
+    grid-template: auto auto auto / auto auto;
+    grid-template-areas:
+        "nombre apellido"
+        "email tel"
+        "msg msg"
+        "send send";
+    justify-content: space-around;
+    align-content: center;
+    place-items: center;
+    background-color: black;
+    border: 1px solid black;
+    width: 700px;
+    height: 400px;
+    padding: 30px;
+}
+
+form input {
+    font-size: 15px;
+    border-style: 1px rgb(158, 145, 112);
+    padding-left: 1em;
+    margin: 5px;
+    width: 335px;
+    height: 50px;
+}
+
+form textarea {
+    font-size: 15px;
+    border-style: 1px rgb(158, 145, 112);
+    padding-left: 1em;
+    margin: 5px;
+    width: 700px;
+    height: 200px;
+    resize: none;
+   
+}
+
+.nombre {
+    grid-area: nombre;
+
+}
+
+.email {
+    grid-area: apellido;
+
+}
+
+.email {
+    grid-area: email;
+
+}
+
+.tel {
+    grid-area: tel;
+
+}
+
+.msg {
+    grid-area: msg;
+
+}
+
+.sendBtn {
+    grid-area: send;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(158, 145, 112);
+    color: white;
+    margin-top: 20px;
+    width: 720px;
+    height: 50px;
+}
+
+.sendBtn:hover {
+    background-color: white;
+    color: rgb(158, 145, 112);
+
+}

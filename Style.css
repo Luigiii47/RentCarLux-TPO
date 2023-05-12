@@ -9,7 +9,7 @@ header {
 }
 
 nav li {
-    display: inline-block;
+    display: inline-flex;
     margin-right: 20px;
 }
 
