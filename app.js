@@ -1,5 +1,4 @@
-let header = `
-<header>
+let header = `<header>
  <nav>
   <ul>
     <li><a href="MainPage.html">Renta de Autos</a></li>
@@ -11,12 +10,12 @@ let header = `
 </header>`
 
 let footer = `<footer>
-<div>
-    <p>Contacto: rentadeautos@example.com</p>
-</div>
-<div>
-    <p class="p-block">© 2023 RentCarLux</p>
-</div>
+    <div>
+        <p>Contacto: rentadeautos@example.com</p>
+    </div>
+    <div>
+        <p class="p-block">© 2023 RentCarLux</p>
+    </div>
 </footer>`
 
 document.write(header)
