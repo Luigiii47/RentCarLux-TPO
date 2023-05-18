@@ -11,36 +11,38 @@
 </head>
 
 <body>
-    <script src=" app.js"></script>
+    <script src="js/app.js"></script>
 
     <article>
         <section class="form">
 
             <p style="text-align: center;">Déjanos tu mensaje, te responderemos a la brevedad.</p>
-            <br><br>
-            <form action="#" target="_blank">
+            <center><p style="font-size: smaller"><b>*</b> Campo obligatorio</p></center>
+            <form action="#" id="form" target="_blank" novalidate>
                 <!--Nombre y apellido-->
 
-                <input type="text" placeholder="Nombre" id="Nombre" class="nombre" maxlength="45">
-                <input type="text" placeholder="Apellido" id="Nombre" class="apellido" maxlength="45">
+                <input type="text" id="nombre" placeholder="Nombre *" class="nombre" maxlength="45">
+                <input type="text" id="apellido" placeholder="Apellido *" class="apellido" maxlength="45">
 
                 <!--Email de la persona-->
 
-                <input type="email" name="" id="Email" placeholder="Email" class="email">
+                <input type="email" id="email" placeholder="Email *" class="email" maxlength="45">
                 
                  <!--Tel de la persona-->
-                <input type="tel" placeholder="Teléfono" id="Teléfono" class="tel">
+                <input type="tel" id="tel" placeholder="Teléfono" class="tel" maxlength="50">
 
                 <!--Mensaje de la persona-->
 
-                <textarea name="msg" id="mensaje" placeholder="Escriba aquí su mensaje..." class="msg"></textarea>
+                <textarea id="msg" placeholder="Escribí aquí tu mensaje... *" class="msg"
+                maxlength="2000"></textarea>
 
                 <!--Boton de enviar-->
-                <input type="submit" value="ENVIAR" class="sendBtn">
+                <input type="submit" name="enviar" id="submit" value="ENVIAR" class="sendBtn">
             </form>
         </section>
     </article>
-    
+    <script src="js\form.js"></script>
     </body>
 
 </html>
+
