@@ -153,8 +153,6 @@ footer div {
     margin-left: 20px;
 
 }
-<<<<<<< Updated upstream
-=======
 .specs {
     flex-basis: 30%;
 }
@@ -182,7 +180,7 @@ footer div {
     align-items: center; 
 }
 
-/*footer {
+footer {
     background-color: #333;
     color: #fff;
     position: absolute;
@@ -197,5 +195,4 @@ footer div {
     align-items: center;
     position: relative;
     top: 10%;
-}*/
->>>>>>> Stashed changes
+}
