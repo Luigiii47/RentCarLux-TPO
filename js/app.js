@@ -3,7 +3,7 @@ let header = `<header>
   <ul>
     <li><a href="index.html">Renta de Autos</a></li>
     <li><a href="disponibles.html">Autos disponibles</a></li>
-    <li><a href="reservas.html">Reservar</a></li>
+    <li><a href="reserva.html">Reservar</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
 </nav>

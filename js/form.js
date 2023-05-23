@@ -1,21 +1,22 @@
 // ACTIVA EVENT LISTENER PARA EL EVENTO 'SUBMIT'
+
 form.addEventListener('submit', e => {
     e.preventDefault();
     checkInputs();
-
 })
 
 // FUNCIÓN CON LAS VALIDACIONES
 
 function checkInputs() {
-    // CAPTURAMOS EN VARIABLES LOS VALUES QUE INGRESA EL USUARIO EN CADA CAMPO
+
+    // CAPTURAMOS EN VARIABLES LOS VALORES QUE INGRESA EL USUARIO EN CADA CAMPO
+
     var formulario = document.getElementById("form");
     var nombre = document.getElementById("nombre").value.trim();
     var apellido = document.getElementById("apellido").value.trim();
     var email = document.getElementById("email").value.trim();
     var tel = document.getElementById("tel").value.trim();
     var mensaje = document.getElementById("msg").value.trim();
-
 
     // CAPTURAMOS EN UNA VARIABLE LA EXPRESIÓN REGULAR QUE REPRESENTA EL FORMATO CORRECTO DEL EMAIL
 
@@ -50,7 +51,7 @@ function checkInputs() {
         alert(`E-Mail incorrecto\nEl formato debe ser: usuario@dominio.xxx`);
         return false;
     }
-    // SI TODO ESTÁ BIEN, SE ENVÍA.
+    // SI TODO ESTÁ BIEN, SE ENVÍA y SE RESETEAN TODOS LOS CAMPOS
 
     else {
         alert(`Gracias por contactarse, ${nombre}. Nos comunicaremos con Ud. en breve`);
