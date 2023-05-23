@@ -179,20 +179,3 @@ footer div {
     justify-content: center;
     align-items: center; 
 }
-
-footer {
-    background-color: #333;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-}
-
-footer div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 10%;
-}
