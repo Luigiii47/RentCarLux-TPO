@@ -2,7 +2,9 @@
 form.addEventListener('submit', e => {
     e.preventDefault();
     checkInputs();
+
 })
+
 // FUNCIÓN CON LAS VALIDACIONES
 
 function checkInputs() {
@@ -14,12 +16,12 @@ function checkInputs() {
     var tel = document.getElementById("tel").value.trim();
     var mensaje = document.getElementById("msg").value.trim();
 
+
     // CAPTURAMOS EN UNA VARIABLE LA EXPRESIÓN REGULAR QUE REPRESENTA EL FORMATO CORRECTO DEL EMAIL
 
     var validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
     // CHEQUEAMOS QUE NO HAYA CAMPOS VACÍOS
-
     if (nombre === '' || apellido === '' || email === '' || mensaje === '') {
         alert(`Por favor, complete todos los campos marcados con un asterisco.`);
         return false;
@@ -48,10 +50,11 @@ function checkInputs() {
         alert(`E-Mail incorrecto\nEl formato debe ser: usuario@dominio.xxx`);
         return false;
     }
-    // SI TODO ESTÁ BIEN, DEBERÍA ENVIARSE. PERO NOOOO ANDAAAA!
+    // SI TODO ESTÁ BIEN, SE ENVÍA.
 
     else {
-        alert(`Muchas gracias por contactactarnos ${nombre}, nos comunicaremos con Ud. cuanto antes`);
+        alert(`Gracias por contactarse, ${nombre}. Nos comunicaremos con Ud. en breve`);
         formulario.submit();
+        formulario.reset();
     }
 }
