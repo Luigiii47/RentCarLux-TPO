@@ -160,10 +160,6 @@ footer div {
         height: 2.5rem;
     }
 
-    .input:focus {
-        animation: none;
-        box-shadow: 0 0 10px 2px rgb(158, 145, 112);
-    }
 
     form textarea {
         margin: .4rem;
@@ -183,15 +179,11 @@ footer div {
         height: 50px;
     }
 
-    .sendBtn:hover {
-        animation: none;
-    }
 
-    .sendBtn:active {
-        background-color: white;
-        color: rgb(158, 145, 112);
+    footer {
+        height: 50px;
     }
-footer {height: 50px;}
+}
 
 @media only screen and (max-width: 670px) {
 
@@ -200,6 +192,15 @@ footer {height: 50px;}
         word-wrap: wrap;
         justify-content: center;
         padding: 5px;
+    }
+
+    .sendBtn:hover {
+        animation: none;
+    }
+
+    .sendBtn:active {
+        background-color: white;
+        color: rgb(158, 145, 112);
     }
 }
 
