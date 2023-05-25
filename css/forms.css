@@ -185,13 +185,7 @@ footer div {
 }
 
 @media only screen and (max-width: 670px) {
-
-    nav li {
-        display: flex;
-        word-wrap: wrap;
-        justify-content: center;
-        padding: 5px;
-    }
+   h1 { font-size: medium;}
 
     .sendBtn:hover {
         animation: none;
