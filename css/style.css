@@ -3,11 +3,6 @@
 }
 
 /* Estilos para el encabezado */
-
-a {
-    text-decoration: none;
-}
-
 body {
     background-color: #eaeaea;
     position: relative;
@@ -18,7 +13,7 @@ body {
 header {
     display: flex;
     height: 70px;
-    background-color: #555;
+    background-color: #333;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
@@ -35,13 +30,15 @@ nav a {
 /* Estilos para la sección principal */
 main {
     max-width: 1200px;
+    min-height: 100vh;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px 20px;
+
 }
 
 #ImgPrincipal {
     padding: 10px;
-    margin-top: 0;
+    margin-top: 0px;
 }
 
 #NombreImg {
@@ -52,9 +49,18 @@ main {
     font-size: 50px;
 }
 
+h1 {
+    padding: 10px;
+}
+
 h2 {
     font-size: 30px;
     margin-bottom: 80px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-top: 0;
 }
 
 ul {
@@ -63,21 +69,23 @@ ul {
 }
 
 li {
+    box-shadow: -5px 10px 10px 3px rgb(202, 202, 202);
     display: inline-block;
     margin-right: 30px;
     width: 300px;
     text-align: center;
     vertical-align: top;
-}
-
-h3 {
-    font-size: 24px;
-    margin-top: 0;
+    padding: 10px 0;
 }
 
 img {
     width: 100%;
     height: auto;
+}
+
+
+a {
+    text-decoration: none;
 }
 
 p {
@@ -97,10 +105,6 @@ button {
     padding: 10px 20px;
     font-size: 20px;
     cursor: pointer;
-}
-
-.Especial- {
-    margin-bottom: 100px;
 }
 
 button:hover {
@@ -127,18 +131,14 @@ footer div {
     top: 10%;
 }
 
-
-
 /* Estilos para la pagina Displonibles */
-
-
-
 .container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    width: auto;
     background-color: white;
-    border: 3px solid red;
+    box-shadow: -5px 10px 10px 3px rgb(202, 202, 202);
 }
 
 .Auto {
@@ -151,13 +151,18 @@ footer div {
 }
 
 .Auto h1 {
-    color: red;
+    color: #333;
     font-size: 30px;
     margin-left: 20px;
 }
 
 .specs {
     flex-basis: 30%;
+}
+
+.specs li {
+    box-shadow: none;
+padding: 0;
 }
 
 .specs h2 {
@@ -182,9 +187,9 @@ footer div {
 
 .btnReserva {
     flex-basis: 20%;
+    margin: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;    
 }
 
 .btnAnim-Reserva {
@@ -203,19 +208,60 @@ footer div {
     transition-delay: 0ms;
 }
 
+
+.form_reserva {
+    box-shadow: -5px 10px 10px 3px rgb(202, 202, 202);
+  background-color: white;
+    border: none;
+    width: auto;
+    padding: 20px;
+    color: #333;
+}
+
+.form_reserva input,
+select {
+    height: 25px;
+}
+
+.sendBtn_reserva {
+    flex-basis: 20%;
+    margin: 20px auto 0 auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(158, 145, 112);
+    color: white;
+    width: 180px;
+    height: 50px;
+}
+
+.sendBtn_reserva:hover {
+    border:1px solid rgb(158, 145, 112);
+    background-color: white;
+color: rgb(158, 145, 112);
+}
+
 @media only screen and (max-width: 900px) {
     nav a {
         font-size: 20px;
         text-align: end;
         padding: 2px;
     }
-    nav li {height: auto;}
+
+    nav li {
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 670px) {
     h1 {
         font-size: medium;
     }
+
     nav a {
         display: block;
         text-decoration: none;

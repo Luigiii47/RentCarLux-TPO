@@ -1,25 +1,3 @@
-* {
-    margin: 0;
-}
-
-header {
-    background-color: #333;
-    color: #c53737;
-    margin-bottom: 2rem;
-}
-
-nav li {
-    display: inline-flex;
-    margin-right: 20px;
-    padding: 15px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-}
-
 .form {
     display: grid;
     justify-content: space-around;
@@ -35,9 +13,9 @@ form {
         "msg msg"
         "send send";
     justify-content: space-around;
-    align-content: center;
-    background-color: #333;
-    border: 1px solid #333;
+    align-content: start;
+    background-color: white;
+    box-shadow: -5px 10px 10px 3px rgb(202, 202, 202);
     width: 45rem;
     height: 28rem;
     margin: 2rem;
@@ -52,7 +30,6 @@ form input {
     width: 20.5rem;
     height: 3rem;
 }
-
 
 form textarea {
     font-size: 15px;
@@ -178,14 +155,10 @@ footer div {
         width: 79vw;
         height: 50px;
     }
-
-    footer {
-        height: 50px;
-    }
 }
 
 @media only screen and (max-width: 670px) {
-   h1 { font-size: medium;}
+ 
 
     .sendBtn:hover {
         animation: none;
