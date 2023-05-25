@@ -157,8 +157,6 @@ footer div {
 }
 
 @media only screen and (max-width: 670px) {
-
-
     .sendBtn:hover {
         animation: none;
     }

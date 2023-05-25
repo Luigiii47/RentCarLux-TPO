@@ -3,6 +3,13 @@
     margin: 0;
 }
 
+.logo {
+    font-size: 25px;
+    padding-left: 20px;
+    color: rgb(158, 145, 112);
+    font-family: 'MonteCarlo', cursive;
+}
+
 .animate_logo:hover {
     transform: scale(1.01) scale(1.03) scale(1.05);
     text-shadow: -5px 15px 50px rgb(158, 145, 112);
@@ -11,7 +18,7 @@
 body {
     background-color: #eaeaea;
     position: relative;
-    font-family: 'Monomaniac One', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 2px;
 }
 
@@ -29,7 +36,7 @@ header {
     width: auto;
     height: 70px;
     position: relative;
-    background-color: #333;
+    background-color: #0f0f0f;
     justify-content: space-between;
     align-items: center;
     letter-spacing: 2px;
@@ -37,7 +44,7 @@ header {
 
 nav a {
     display: inline-flex;
-    color: #fff;
+    color: #dddddd;
     text-decoration: none;
     justify-content: space-around;
     align-content: center;
@@ -48,7 +55,7 @@ nav a {
 
 nav a:hover {
     background-color: #eaeaea;
-    box-shadow: -1px -5px 10px 3px gray;
+    box-shadow: -3px 3px 15px 3px rgb(158, 145, 112);
     color: #333;
 }
 
@@ -72,9 +79,11 @@ nav a:hover {
 #NombreImg {
     color: #fff;
     position: absolute;
+    text-shadow: -1px 1px 7px #333;
+    color: rgb(158, 145, 112);
     margin-left: 30%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 50px;
+    font-family: 'MonteCarlo', cursive;
+    font-size: 100px;
 }
 
 h1 {
@@ -141,8 +150,8 @@ button:hover {
 
 /* Estilos para el pie de página */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #0f0f0f;
+    color: rgb(158, 145, 112);
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -185,6 +194,7 @@ footer div {
 }
 
 .specs {
+    color: #0f0f0f;
     flex-basis: 30%;
 }
 
@@ -201,13 +211,16 @@ footer div {
 .specs ul {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
+ align-items: center;
+    width: 500px;
+    padding-left: 2px;
     margin-top: -2em;
+    box-shadow: -10px 5px 15px 2px rgb(202, 202, 202);
 }
 
 .specs li {
-    text-align: center;
-    margin-top: 10px;
+    text-align: left;
+    margin: 10px;
     width: 40%;
     font-size: 20px;
 }
@@ -239,8 +252,9 @@ footer div {
     box-shadow: -5px 10px 10px 3px rgb(202, 202, 202);
     background-color: white;
     border: none;
-    width: auto;
-    padding: 20px;
+    margin: auto;
+    width: 950px;
+    padding: 35px;
     color: #333;
 }
 
@@ -251,7 +265,7 @@ select {
 
 .sendBtn_reserva {
     flex-basis: 20%;
-    margin: 20px auto 0 auto;
+    margin: 25px auto 0 auto;
 
     display: flex;
     align-items: center;
@@ -271,13 +285,19 @@ select {
     color: rgb(158, 145, 112);
 }
 
-/* Animaciones globales*/ 
+/* Animaciones globales*/
 
 @media only screen and (max-width: 900px) {
     nav a {
-        font-size: 25px;
+        font-size: 20px;
         text-align: end;
-        padding: 20px 20px;
+        padding: 20px 10px;
+        font-size: 18px;
+    }
+
+    .logo {
+        font-size: 20px;
+        padding-left: 10px;
     }
 
     nav li {
@@ -290,17 +310,18 @@ select {
         height: auto;
     }
 
+
+
     nav a {
         display: block;
         text-decoration: none;
-        font-size: 18px;
-        padding: 10px;
+
     }
 
     nav a:hover {
         background-color: #eaeaea;
-        box-shadow:none;
+        box-shadow: none;
         color: #333;
     }
-    
+
 }
