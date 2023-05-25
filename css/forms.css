@@ -3,13 +3,6 @@
 }
 
 
-nav li {
-    display: inline-flex;
-    margin-right: 20px;
-    padding: 15px;
-}
-
-
 .form {
     display: grid;
     justify-content: space-around;

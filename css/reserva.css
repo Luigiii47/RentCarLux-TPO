@@ -4,22 +4,7 @@
 
 /*Estilos para el encabezado*/
 
-header {
-    background-color: #333;
-    color: #c53737;
-    padding: 15px;
-}
 
-nav li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-}
 
 /*Estilos del contenido principal*/
 
