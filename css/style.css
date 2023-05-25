@@ -245,6 +245,7 @@ footer div {
 
 .btnAnim-Reserva:hover {
     background: #555;
+    box-shadow: 0 0 10px #555, 0 0 40px #555, 0 0 80px #555;
 }
 
 
