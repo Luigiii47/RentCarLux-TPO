@@ -76,7 +76,7 @@ form textarea {
 .sendBtn {
     grid-area: send;
     cursor: pointer;
-    border: none;
+    border: 1px solid rgb(158, 145, 112);
     border-radius: 25px;
     background-color: rgb(158, 145, 112);
     color: white;
@@ -128,7 +128,7 @@ footer div {
         width: 90vw;
         height: 96%;
         margin: 1rem;
-        padding: 0;
+        padding: 20px 0 20px 0 ;
     }
 
     form input {
@@ -147,7 +147,6 @@ footer div {
     .sendBtn {
         grid-area: send;
         cursor: pointer;
-        border: none;
         border-radius: 25px;
         background-color: rgb(158, 145, 112);
         color: white;
@@ -158,7 +157,7 @@ footer div {
 }
 
 @media only screen and (max-width: 670px) {
- 
+
 
     .sendBtn:hover {
         animation: none;
@@ -181,6 +180,7 @@ footer div {
     100% {
         background-color: white;
         color: rgb(158, 145, 112);
+        
     }
 }
 
