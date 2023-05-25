@@ -3,26 +3,33 @@
 }
 
 /* Estilos para el encabezado */
+
+a{
+    text-decoration: none;
+}
+
 body{
     background-color: #eaeaea;
     position: relative;
-}
-header {
-    background-color: #333;
-    color: #c53737;
-    padding: 15px;
-    width: 100%;
+    font-family: 'Smokum', cursive;
+    letter-spacing: 2px;
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 20px;
+header {
+    display: flex;
+    height: 70px;
+    background-color: #555;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    letter-spacing: 2px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
+    padding-right: 40px;
 }
 
 /* Estilos para la sección principal */
