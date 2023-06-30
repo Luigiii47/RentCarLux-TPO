@@ -310,6 +310,10 @@ select {
     header {
         height: auto;
     }
+    #NombreImg{
+        font-size: 40px;
+        margin-left: 65px;
+    }
 
 
 
