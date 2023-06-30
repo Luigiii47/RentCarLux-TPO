@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_admin.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <button class="btn">Nuevo Vehíchulo</button>
+
+        </div>
+
+        <br>
+        <p>Buscar Vehículo</p>
+        <br>
+        <form action="#">
+            <label for="buscarpor">Buscar por</label>
+            <select name="buscarpor" id="buscarpor">
+                <option value="">Código</option>
+                <option value="">Marca</option>
+                <option value="">Modelo</option>
+                <option value="">Motor</option>
+                <option value="">Potencia</option>
+                <option value="">Velocidad</option>
+                <option value="">Peso</option>
+                <option value="">Color</option>
+
+            </select>
+
+            <select name="buscar_value" id="buscar_value">
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <button>Buscar</button>
+        </form>
+        <br>
+
+
+        <table class="tabla">
+            <tr class="tabla_cat" style="font-weight:bold;">
+                <td>Código</td>
+                <td>Marca</td>
+                <td>Modelo</td>
+                <td>Motor</td>
+                <td>Potencia(CV)</td>
+                <td>Velocidad(km/h)</td>
+                <td>Peso(kg)</td>
+                <td>Color</td>
+                <td colspan="2">Acciones</td>
+            </tr>
+            <tr class="tabla_vehiculo">
+                <td>001</td>
+                <td>Ford</td>
+                <td>Mustang</td>
+                <td>V10</td>
+                <td>475</td>
+                <td>168</td>
+                <td>1691</td>
+                <td>Negro</td>
+                <td><button>Modificar</button></td>
+                <td><button>Eliminar</button></td>
+            </tr>
+            
+
+        </table>
+    </div>
+</body>
+
+</html>
