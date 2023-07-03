@@ -48,7 +48,7 @@ class Auto:
         self.peso = peso
         self.color = color
 
-    def modificar(self, codigo, cantidad, marca, modelo, motor, potencia, velocidad, peso, color):
+    def modificar(self, nuevo_codigo, nuevo_cantidad, nuevo_marca, nuevo_modelo, nuevo_motor, nuevo_potencia, nuevo_velocidad, nuevo_peso, nuevo_color):
         self.codigo = nuevo_codigo
         self.cantidad = nuevo_cantidad
         self.marca = nuevo_marca
@@ -58,3 +58,5 @@ class Auto:
         self.velocidad = nuevo_velocidad
         self.peso = nuevo_peso
         self.color = nuevo_color
+
+
