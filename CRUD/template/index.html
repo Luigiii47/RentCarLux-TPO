@@ -6,47 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_admin.css">
-    <link rel="shortcut icon" href="logo.lux.jpeg" >
+    <link rel="shortcut icon" href="logo.lux.jpeg">
 </head>
 
 <body>
     <div class="container">
-        <div>
-            <button class="btn">Nuevo Vehíchulo</button>
-
-        </div>
-
         <br>
-        <p>Buscar Vehículo</p>
+        <p><b>Buscar Vehículo</b></p>
         <br>
+
         <form action="#">
             <label for="buscapor">Buscar por</label>
             <select name="buscapor" id="buscapor">
-                <option value="codigo">Código</option>
                 <option value="marca">Marca</option>
                 <option value="modelo">Modelo</option>
                 <option value="motor">Motor</option>
                 <option value="potencia">Potencia</option>
                 <option value="velocidad">Velocidad</option>
-                <option value="peso">Peso</option>
                 <option value="color">Color</option>
             </select>
 
             <select name="buscar_value" id="buscar_value">
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+
             </select>
-            <button>Buscar</button>
+            <button class="btn">Buscar</button>
         </form>
         <br>
 
+        <div>
+            <button class="btn" onclick="window.location.href='nuevo.html'">Nuevo Vehíchulo</button>
+        </div>
 
         <table class="tabla">
-            <tr class="tabla_cat" style="font-weight:bold;">
+            <tr style="font-weight:bold;">
                 <td>Código</td>
+                <td>Cantidad</td>
                 <td>Marca</td>
                 <td>Modelo</td>
                 <td>Motor</td>
@@ -56,19 +50,19 @@
                 <td>Color</td>
                 <td colspan="2">Acciones</td>
             </tr>
-            <tr class="tabla_vehiculo">
-                <td>001</td>
-                <td>Ford</td>
-                <td>Mustang</td>
-                <td>V10</td>
-                <td>475</td>
-                <td>168</td>
-                <td>1691</td>
-                <td>Negro</td>
-                <td><button>Modificar</button></td>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button onclick="window.location.href='modificar.html'">Modificar</button></td>
                 <td><button>Eliminar</button></td>
             </tr>
-            
 
         </table>
     </div>
