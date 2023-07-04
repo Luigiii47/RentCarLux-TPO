@@ -1,4 +1,5 @@
 import sqlite3
+from flask import Flask, jsonify, request
 
 # Configurar la conexión a la base de datos SQLite
 DATABASE = 'vehiculos.db'
@@ -66,7 +67,7 @@ class Stock:
         self.cursor = self.conexion.cursor()
 
     def agregar_auto(self, codigo, cantidad, marca, modelo, motor, potencia, velocidad, peso, color):
-        auto_existe = self.consultar_auto_codigo(codigo)
+        auto_existe = self.buscar_auto_codigo(codigo)
         if auto_existe:
             print("El auto ya existe en la Base de Datos")
             return False
@@ -77,7 +78,7 @@ class Stock:
         self.conexion.commit()
         return True
 
-    def consultar_auto_codigo(self, codigo):
+    def buscar_auto_codigo(self, codigo):
         sql = f'SELECT * FROM autos WHERE codigo = {codigo};'
         self.cursor.execute(sql)
         row = self.cursor.fetchone()
@@ -86,7 +87,7 @@ class Stock:
             return Auto(codigo, cantidad, marca, modelo, motor, potencia, velocidad, peso, color)
         return False
     
-    def consultar_auto_marca(self, marca):
+    def buscar_auto_marca(self, marca):
         sql = f'SELECT * FROM autos WHERE marca = "{marca}";'
         self.cursor.execute(sql)
         row = self.cursor.fetchone()
@@ -95,7 +96,7 @@ class Stock:
             return Auto(codigo, cantidad, marca, modelo, motor, potencia, velocidad, peso, color)
         return False
     
-    def consultar_auto_modelo(self, modelo):
+    def buscar_auto_modelo(self, modelo):
         sql = f'SELECT * FROM autos WHERE modelo = "{modelo}";'
         self.cursor.execute(sql)
         row = self.cursor.fetchone()
@@ -104,7 +105,7 @@ class Stock:
             return Auto(codigo, cantidad, marca, modelo, motor, potencia, velocidad, peso, color)
         return False
     
-    def consultar_auto_motor(self, motor):
+    def buscar_auto_motor(self, motor):
         sql = f'SELECT * FROM autos WHERE motor = "{motor}";'
         self.cursor.execute(sql)
         row = self.cursor.fetchone()
@@ -113,7 +114,7 @@ class Stock:
             return Auto(codigo, cantidad, marca, modelo, motor, potencia, velocidad, peso, color)
         return False
     
-    def consultar_auto_color(self, color):
+    def buscar_auto_color(self, color):
         sql = f'SELECT * FROM autos WHERE color = "{color}";'
         self.cursor.execute(sql)
         row = self.cursor.fetchone()
@@ -123,7 +124,7 @@ class Stock:
         return False
     
     def modificar_auto(self, codigo, cantidad, marca, modelo, motor, potencia, velocidad, peso, color):
-        auto = self.consultar_auto_codigo(codigo)
+        auto = self.buscar_auto_codigo(codigo)
         if auto:
             auto.modificar(nuevo_cantidad, nuevo_marca, nuevo_modelo, nuevo_motor, nuevo_potencia, nuevo_velocidad, nuevo_peso, nuevo_color)
             sql = f'UPDATE autos SET cantidad = {nuevo_cantidad}, marca = "{nuevo_marca}", modelo = "{nuevo_modelo}", motor = "{nuevo_motor}", potencia = {nuevo_potencia}, velocidad = {nuevo_velocidad}, peso = {nuevo_peso}, color = "{nuevo_color}" WHERE codigo = {codigo};'
@@ -147,34 +148,22 @@ class Stock:
             print(f'{codigo}, {cantidad}, {marca}, {modelo}, {motor}, {potencia}, {velocidad}, {peso}, {color}')
         
 
-
-
 # -----------------------------------------------------------------------
 #             PRUEBAS
 # -----------------------------------------------------------------------
 # manejador = Stock()
-
 # nuevo_auto = manejador.agregar_auto(1, 2, "Ford", "Mustang", "V10", 460, 138, 1690, "Negro")
-
-# consulta = manejador.consultar_auto_codigo(1)
+# consulta = manejador.buscar_auto_codigo(1)
 # print(f'El código del auto es: {consulta.codigo}')
-
-# consulta = manejador.consultar_auto_marca("Ford")
+# consulta = manejador.buscar_auto_marca("Ford")
 # print(f'La marca del auto es: {consulta.marca}')
-# print(f'El modelo del auto es: {consulta.modelo}')
-# print(f'El motor del auto es: {consulta.motor}')
-# print(f'El color del auto es: {consulta.color}')
-
-# consulta = manejador.consultar_auto_modelo("Mustang")
-# print(f'El modelo del auto es: {consulta.modelo}')
-
-# consulta = manejador.consultar_auto_motor("V10")
-# print(f'El motor del auto es: {consulta.motor}')
-
-# consulta = manejador.consultar_auto_color("Negro")
-# print(f'El color del auto es: {consulta.color}')
-
 # manejador.listar_stock()
-
 # #eliminar_auto = manejador.eliminar_auto(1)
 
+
+# -----------------------------------------------------------------------
+#                 RUTEO
+# -----------------------------------------------------------------------
+
+app = Flask(__name__)
+stock = Stock()
