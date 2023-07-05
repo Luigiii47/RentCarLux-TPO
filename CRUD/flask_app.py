@@ -1,5 +1,6 @@
 import sqlite3
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 # CONFIGURACION DE BASE DE DATOS
 DATABASE = 'vehiculos.db'
@@ -131,9 +132,10 @@ class Stock:
 #         DECORADORES FLASK
 # -----------------------------------------------
 app = Flask(__name__)
+CORS(app)
 stock = Stock()
 
-@app.route('/autos/<campo>/<valor>', methods=['GET'])
+@app.route('/gestion/<campo>/<valor>', methods=['GET'])
 def buscar_auto(campo, valor):
     if campo not in ["codigo", "marca", "modelo", "motor", "color"]:
         return jsonify({'message': 'Campo de búsqueda inválido'}), 400
@@ -158,11 +160,11 @@ def buscar_auto(campo, valor):
 def index():
     return render_template('gestion.html')
 
-@app.route('/autos', methods=['GET'])
+@app.route('/gestion', methods=['GET'])
 def obtener_auto():
     return stock.listar_stock()
 
-@app.route('/autos', methods=['POST'])
+@app.route('/gestion', methods=['POST'])
 def agregar_auto():
     codigo = request.json.get('codigo')
     cantidad = request.json.get('cantidad')
@@ -175,7 +177,7 @@ def agregar_auto():
     color = request.json.get('color')
     return stock.agregar_auto(codigo, cantidad, marca, modelo, motor, potencia, velocidad, peso, color)
 
-@app.route('/autos/<int:codigo>', methods=['PUT'])
+@app.route('/gestion/<int:codigo>', methods=['PUT'])
 def modificar_auto(codigo):
     nuevo_cantidad = request.json.get('cantidad')
     nuevo_marca = request.json.get('marca')
@@ -187,7 +189,7 @@ def modificar_auto(codigo):
     nuevo_color = request.json.get('color')
     return stock.modificar_auto(codigo, nuevo_cantidad, nuevo_marca, nuevo_modelo, nuevo_motor, nuevo_potencia, nuevo_velocidad, nuevo_peso, nuevo_color)
 
-@app.route('/autos/<int:codigo>', methods=['DELETE'])
+@app.route('/gestion/<int:codigo>', methods=['DELETE'])
 def eliminar_auto(codigo):
     return stock.eliminar_auto(codigo)
 
